@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+// Desafio Super Trunfo - Cidades
+// Tema 1 - Cadastro das Cartas
+
+int main() {
+    // Definição das variáveis para armazenar as propriedades da cidade
+    char codigo[10];
+    char nome[50];
+    int populacao;
+    float area;
+    double pib;
+
+    // Cadastro da Carta
+    printf("--- Cadastro da Carta ---\n");
+    printf("Digite o codigo da cidade: ");
+    scanf("%s", codigo);
+    printf("Digite o nome da cidade: ");
+    scanf(" %49[^\n]", nome); // Usa um espaco antes de %49 para consumir a nova linha
+    printf("Digite a populacao (em habitantes): ");
+    scanf("%d", &populacao);
+    printf("Digite a area (em km2): ");
+    scanf("%f", &area);
+    printf("Digite o PIB (em bilhoes de dolares): ");
+    scanf("%lf", &pib);
+
+    printf("\n");
+
+    // Exibição dos Dados da Carta
+    printf("--- Dados da Carta Cadastrada ---\n");
+    printf("Codigo: %s\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("Populacao: %d habitantes\n", populacao);
+    printf("Area: %.2f km2\n", area);
+    printf("PIB: %.2f bilhoes de dolares\n", pib);
+
+    return 0;
+}
